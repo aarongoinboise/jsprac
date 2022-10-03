@@ -7,7 +7,7 @@ const { sum } = require('./operations.js')
 
 // go to http://localhost:3000/ to see this message
 app.get('/', (req, res) => {
-    res.send('Hello world!')
+    res.send('You\'re using JavaScript')
 });
 
 // go to http://localhost:3000/about to see this message
@@ -47,6 +47,14 @@ app.get('/api/operations/sum/:first_value/:second_value', (req, res) => {
     res.send(`${result_of_operation}`);
     // this is equivalent to
     // res.status(200).send(`${result_of_operation}`);
+});
+
+// go to http://localhost:3000/mission to see this message
+app.get('/mission', (req, res) => {
+    //this message should be displayed in the console that was used to start the server
+    console.log("A new request for the route '/mission' received at " + new Date() + "at the time of " + console.time);
+
+    res.send('Our mission is to access the internet and do math problems.')
 });
 
 module.exports = app
