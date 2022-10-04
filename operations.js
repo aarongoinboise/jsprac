@@ -15,8 +15,14 @@ function divide(a, b)
 
 function fibonacci(a)
 {
-    if (a <= 1) {
-        return a;
+    if (a <= 2) {
+        if (a == 2) {
+            return 1;
+        } else if (a == 1) {
+            return 0;
+        } else {
+            return a;
+        }
     }
     return fibonacci(a - 1) + fibonacci(a - 2);
 }
