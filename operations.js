@@ -15,16 +15,10 @@ function divide(a, b)
 
 function fibonacci(a)
 {
-    if (a < 1) {
-        return;
+    if (a <= 1) {
+        return a;
     }
-    var prev = 0;
-    var ans = 0;
-    for (let i = 0; i < a; i++) {
-        ans += prev;
-        prev = ans;
-    }
-    return ans;
+    return fibonacci(a - 1) + fibonacci(a - 2);
 }
 
 

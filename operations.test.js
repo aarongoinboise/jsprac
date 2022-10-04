@@ -53,5 +53,5 @@ test('divides 2 / -1 to equal -2', () => {
 });
 
 test('second number in a fibonacci sequence is 1', () => {
-    expect(fibonacci(2).toBe(1))
+    expect(fibonacci(2)).toBe(1)
 });
