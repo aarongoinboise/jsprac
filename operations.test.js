@@ -6,6 +6,8 @@ const {subtract} = require('./operations')
 
 const {divide} = require('./operations')
 
+const {fibonacci} = require('./operations')
+
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3)
 });
@@ -48,4 +50,8 @@ test('divides -1 / 2 to equal -0.5', () => {
 
 test('divides 2 / -1 to equal -2', () => {
     expect(divide(2, -1)).toBe(-2)
+});
+
+test('second number in a fibonacci sequence is 1', () => {
+    expect(fibonacci(2).toBe(1))
 });

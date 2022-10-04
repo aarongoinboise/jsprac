@@ -6,10 +6,10 @@ test('GET the root route and expects the 200 (ok) status code', async () => {
     await request.get('/').expect(200);
 });
 
-test('GET the root route and expects body of the response to contain "Hello world"', async () => {
+test('GET the root route and expects body of the response to contain "You\'re using JavaScript"', async () => {
     const response = await request.get('/')
 
-    expect(response.text).toContain("Hello world")
+    expect(response.text).toContain("You\'re using JavaScript")
 });
 
 test('GET the /about route and expect a non-empty text', async () => {
